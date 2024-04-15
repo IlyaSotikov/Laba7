@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sotikov</title>
+</head>
+<body>
+<script>
+    function calculate() {
+        var x = parseFloat(document.getElementById("inputX").value);
+        var a = 2.7;
+        var b = 1.5;
+
+        if (x <= -1) {
+            var e = 1 / (1 + Math.pow(x, 2));
+            document.getElementById("result").innerHTML = e;
+        } else if (x > 1) {
+            var t = (Math.pow(x, 2) + Math.cos(a));
+            document.getElementById("result").innerHTML = t;
+        } else {
+            var y = Math.sin(a * x + b);
+            document.getElementById("result").innerHTML = y;
+        }
+    }
+</script>
+
+<input placeholder="Введите X" id="inputX" type="number"/>
+<button id="button" onclick="calculate()">Посчитать</button>
+<div id="result"></div>
+</body>
+</html>

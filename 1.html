@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sotikov</title>
+</head>
+<body>
+<script>
+  function calculate() {
+      const num = parseFloat(document.getElementById("inputX").value);
+      const isThreeDigit = num >= 100 && num <= 999;
+      const isOdd = num % 2 !== 0;
+
+      if (isThreeDigit && isOdd) {
+          document.getElementById("result").innerHTML = "Это трехзначное нечетное число.";
+      } else {
+          document.getElementById("result").innerHTML = "Это число не является  трехзначным нечетным числом.";
+      }
+  }
+</script>
+
+<input placeholder="Введите трехзначное число" id="inputX" type="number"/>
+<button id="button" onclick="calculate()">Проверить</button>
+<div id="result"></div>
+</body>
+</html>

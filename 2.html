@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sotikov</title>
+</head>
+<body>
+<script>
+  function calculate() {
+    let A = parseFloat(document.getElementById("inputA").value);
+    let B = parseFloat(document.getElementById("inputB").value);
+    let C = parseFloat(document.getElementById("inputC").value);
+
+    if (A <= B && B <= C) {
+      A *= 2;
+      B *= 2;
+      C *= 2;
+    } else if (A >= B && B >= C) {
+      A *= 2;
+      B *= 2;
+      C *= 2;
+    } else {
+      A = -A;
+      B = -B;
+      C = -C;
+    }
+
+    document.getElementById("result").innerText = "A: " + A + ", B: " + B + ", C: " + C;
+  }
+</script>
+
+<input placeholder="Введите число" id="inputA" type="number"/>
+<input placeholder="Введите число" id="inputB" type="number"/>
+<input placeholder="Введите число" id="inputC" type="number"/>
+<button id="button" onclick="calculate()">Calculate</button>
+<div id="result"></div>
+</body>
+</html>
